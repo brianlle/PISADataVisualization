@@ -8,4 +8,3 @@ keep_columns = ['CNT', 'SUBNATIO', 'STRATUM', 'NC', 'ST01Q01', 'ST06Q01', 'ST13Q
 pisa = pd.read_csv('pisa2012.csv', names=keep_columns)
 
 pisa.to_csv('truncatedPisa.csv')
-
