@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <style>
+    h2 { text-align: center ; }
+  </style>
+    <script type="text/javascript">
+      function draw(data) {
+      
+      /*
+        D3.js setup code
+      */
+
+          "use strict";
+          var margin = 75,
+              width = 1400 - margin,
+              height = 600 - margin;
+
+          d3.select('body').append('h2').text('PISA Math Averages Based on Home Environment');
+
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+            .append('g')
+                .attr('class','chart');
+
+      /*
+        Dimple.js Chart construction code
+      */
+
+          var myChart = new dimple.chart(svg, data);
+          var x = myChart.addCategoryAxis("x", "country");
+          x.addOrderRule("country");
+          var y = myChart.addMeasureAxis("y", "math_average");
+          y.overrideMax = 650;
+          var s = myChart.addSeries("tools", dimple.plot.area);
+          s.stacked = false;
+          s.interpolation = "step";
+          var myLegend = myChart.addLegend(1100, 50, 60, 300, "Right");
+          myChart.assignColor("internet", "#80B1D3", "#6b94b0", 0.8);
+          myChart.assignColor("computer", "#FB8072", "#d26b5f", 0.8);
+          myChart.assignColor("own room", "#FDB462", "#d39651", 0.8);
+          myChart.assignColor("no tools", "#B3DE69", "#95b957", 1);
+// internet "#80B1D3"
+// no tools "#B3DE69"
+
+          myChart.draw();
+
+          myChart.legends = [];
+          svg.selectAll("title_text")
+            .data(["Click legend to","toggle situations:"])
+            .enter()
+            .append("text")
+            .attr("x", 1050)
+            .attr("y", function (d, i) { return 40 + i * 14; })
+            .style("font-family", "sans-serif")
+            .style("font-size", "10px")
+            .style("color", "Black")
+            .text(function (d) { return d; });
+
+
+        var filterValues = dimple.getUniqueValues(data, "tools");
+        myLegend.shapes.selectAll("rect")
+           .on("click", function (e) {
+            // This indicates whether the item is already visible or not
+            var hide = false;
+            var newFilters = [];
+            // If the filters contain the clicked shape hide it
+            filterValues.forEach(function (f) {
+              if (f === e.aggField.slice(-1)[0]) {
+                hide = true;
+              } else {
+                newFilters.push(f);
+              }
+            });
+            // Hide the shape or show it
+            if (hide) {
+              d3.select(this).style("opacity", 0.2);
+            } else {
+              newFilters.push(e.aggField.slice(-1)[0]);
+              d3.select(this).style("opacity", 0.8);
+            }
+            // Update the filters
+            filterValues = newFilters;
+            
+            // Filter the data
+            myChart.data = dimple.filterData(data, "tools", filterValues);
+
+
+            // Passing a duration parameter makes the chart animate. Without
+            // it there is no transition
+            myChart.draw(800);
+         });
+
+        };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 (not dimple.js) to load the TSV file
+    and pass the contents of it to the draw function
+    */
+  d3.csv("math_averages_1.csv", draw);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+,country,math_average,tools
+0,Albania,391.2465456,no tools
+1,Argentina,354.7530434,no tools
+2,Australia,373.7599942,no tools
+3,Austria,434.2017273,no tools
+4,Belgium,410.8950382,no tools
+5,Brazil,354.5799691,no tools
+6,Bulgaria,353.3267727,no tools
+7,Canada,437.5329793,no tools
+8,Chile,378.4886885,no tools
+9,China-Shanghai,520.8937308,no tools
+10,Chinese Taipei,487.1553245,no tools
+11,Colombia,349.9922569,no tools
+12,Connecticut (USA),461.8087,no tools
+13,Costa Rica,368.2362524,no tools
+14,Croatia,410.0693556,no tools
+15,Czech Republic,470.0007192,no tools
+16,Denmark,449.045775,no tools
+17,Estonia,487.4766375,no tools
+18,Finland,406.837125,no tools
+19,Florida (USA),433.2528364,no tools
+20,France,366.388855,no tools
+21,Germany,330.3941,no tools
+22,Greece,394.3184008,no tools
+23,Hong Kong-China,481.2354,no tools
+24,Hungary,420.5351081,no tools
+25,Iceland,423.37592,no tools
+26,Indonesia,357.3408213,no tools
+27,Ireland,443.9426294,no tools
+28,Italy,432.8507814,no tools
+29,Japan,477.8063444,no tools
+30,Jordan,348.0745597,no tools
+31,Kazakhstan,401.606709,no tools
+32,Korea,469.9821844,no tools
+33,Latvia,430.9844818,no tools
+34,Liechtenstein,387.0618,no tools
+35,Lithuania,416.3928245,no tools
+36,Luxembourg,430.9160241,no tools
+37,Macao-China,493.1531381,no tools
+38,Malaysia,387.1979343,no tools
+39,Massachusetts (USA),435.6935111,no tools
+40,Mexico,397.2343054,no tools
+41,Montenegro,369.7807203,no tools
+42,Netherlands,473.971825,no tools
+43,New Zealand,410.7351918,no tools
+44,Norway,303.1529556,no tools
+45,Perm(Russian Federation),434.6906333,no tools
+46,Peru,344.1014055,no tools
+47,Poland,475.610883,no tools
+48,Portugal,407.9453692,no tools
+49,Qatar,319.8207409,no tools
+50,Romania,405.269693,no tools
+51,Russian Federation,432.0152019,no tools
+52,Serbia,392.4978879,no tools
+53,Singapore,455.2754429,no tools
+54,Slovak Republic,385.3145705,no tools
+55,Slovenia,428.6571,no tools
+56,Spain,416.0544407,no tools
+57,Sweden,338.4338857,no tools
+58,Switzerland,439.911196,no tools
+59,Thailand,398.1940714,no tools
+60,Tunisia,364.0742795,no tools
+61,Turkey,402.8572789,no tools
+62,United Arab Emirates,353.2611235,no tools
+63,United Kingdom,401.2880818,no tools
+64,United States of America,420.1163414,no tools
+65,Uruguay,374.463706,no tools
+66,Vietnam,497.4833355,no tools
+67,Albania,393.953715,own room
+68,Argentina,405.2090944,own room
+69,Australia,496.9039914,own room
+70,Austria,511.8179203,own room
+71,Belgium,525.4876166,own room
+72,Brazil,389.5512112,own room
+73,Bulgaria,444.308906,own room
+74,Canada,512.0429569,own room
+75,Chile,450.3252923,own room
+76,China-Shanghai,615.9254828,own room
+77,Chinese Taipei,558.1038494,own room
+78,Colombia,396.3433185,own room
+79,Connecticut (USA),503.9905533,own room
+80,Costa Rica,414.1518923,own room
+81,Croatia,470.0337717,own room
+82,Czech Republic,521.2954239,own room
+83,Denmark,491.38904,own room
+84,Estonia,523.0115619,own room
+85,Finland,511.9742039,own room
+86,Florida (USA),470.1723108,own room
+87,France,508.2876985,own room
+88,Germany,522.756583,own room
+89,Greece,456.7394424,own room
+90,Hong Kong-China,565.0676005,own room
+91,Hungary,486.5626091,own room
+92,Iceland,495.3446531,own room
+93,Indonesia,380.5931526,own room
+94,Ireland,504.1440663,own room
+95,Italy,494.1207462,own room
+96,Japan,538.7512207,own room
+97,Jordan,387.5906092,own room
+98,Kazakhstan,435.2258234,own room
+99,Korea,558.5400956,own room
+100,Latvia,498.2617735,own room
+101,Liechtenstein,540.980175,own room
+102,Lithuania,480.0042328,own room
+103,Luxembourg,495.7653023,own room
+104,Macao-China,538.6375399,own room
+105,Malaysia,422.3293518,own room
+106,Massachusetts (USA),510.9360374,own room
+107,Mexico,424.2691743,own room
+108,Montenegro,407.2162957,own room
+109,Netherlands,520.6675927,own room
+110,New Zealand,506.3226126,own room
+111,Norway,491.9270867,own room
+112,Perm(Russian Federation),487.4324435,own room
+113,Peru,369.8429346,own room
+114,Poland,523.7834849,own room
+115,Portugal,490.7463031,own room
+116,Qatar,381.0428206,own room
+117,Romania,449.296814,own room
+118,Russian Federation,482.9882951,own room
+119,Serbia,447.2283498,own room
+120,Singapore,572.9530622,own room
+121,Slovak Republic,488.9236125,own room
+122,Slovenia,484.920499,own room
+123,Spain,497.8997795,own room
+124,Sweden,483.6567429,own room
+125,Switzerland,524.9027688,own room
+126,Thailand,444.2608997,own room
+127,Tunisia,393.3261742,own room
+128,Turkey,461.9635147,own room
+129,United Arab Emirates,434.1072907,own room
+130,United Kingdom,493.0130557,own room
+131,United States of America,485.4725028,own room
+132,Uruguay,421.8308458,own room
+133,Vietnam,514.4343164,own room
+134,Albania,394.701999,computer
+135,Argentina,404.4883313,computer
+136,Australia,499.2778415,computer
+137,Austria,509.2677947,computer
+138,Belgium,523.8406667,computer
+139,Brazil,404.8406884,computer
+140,Bulgaria,450.6522718,computer
+141,Canada,513.1887314,computer
+142,Chile,452.9422581,computer
+143,China-Shanghai,618.4359592,computer
+144,Chinese Taipei,564.3315854,computer
+145,Colombia,403.0104523,computer
+146,Connecticut (USA),505.7809505,computer
+147,Costa Rica,420.1269804,computer
+148,Croatia,472.9014137,computer
+149,Czech Republic,522.0645781,computer
+150,Denmark,488.3810508,computer
+151,Estonia,522.1254282,computer
+152,Finland,510.3413939,computer
+153,Florida (USA),471.0987049,computer
+154,France,503.6318817,computer
+155,Germany,521.633433,computer
+156,Greece,459.6743011,computer
+157,Hong Kong-China,563.4073398,computer
+158,Hungary,490.1141256,computer
+159,Iceland,495.3807055,computer
+160,Indonesia,411.8294781,computer
+161,Ireland,503.8198293,computer
+162,Italy,474.9089657,computer
+163,Japan,494.0556071,computer
+164,Jordan,549.2097039,computer
+165,Kazakhstan,393.0959747,computer
+166,Korea,444.689508,computer
+167,Latvia,557.838545,computer
+168,Liechtenstein,499.1699288,computer
+169,Lithuania,538.7932352,computer
+170,Luxembourg,482.2083574,computer
+171,Macao-China,492.5808849,computer
+172,Malaysia,541.1124037,computer
+173,Massachusetts (USA),440.9761816,computer
+174,Mexico,511.165453,computer
+175,Montenegro,435.9266276,computer
+176,Netherlands,412.8752009,computer
+177,New Zealand,521.6179552,computer
+178,Norway,508.7149843,computer
+179,Perm(Russian Federation),492.3073467,computer
+180,Peru,491.2464738,computer
+181,Poland,402.427275,computer
+182,Portugal,522.1670571,computer
+183,Qatar,488.699802,computer
+184,Romania,385.8740006,computer
+185,Russian Federation,453.1637581,computer
+186,Serbia,486.9632893,computer
+187,Singapore,452.1538074,computer
+188,Slovak Republic,573.4261101,computer
+189,Slovenia,497.2070722,computer
+190,Spain,486.2430923,computer
+191,Sweden,498.7159157,computer
+192,Switzerland,482.5965865,computer
+193,Thailand,522.2998642,computer
+194,Tunisia,460.7066917,computer
+195,Turkey,410.2816906,computer
+196,United Arab Emirates,467.6664629,computer
+197,United Kingdom,436.6745674,computer
+198,United States of America,493.4490047,computer
+199,Uruguay,487.2751344,computer
+200,Vietnam,420.4212025,computer
+201,Albania,396.6158379,internet
+202,Argentina,410.3979187,internet
+203,Australia,499.7445848,internet
+204,Austria,509.160674,internet
+205,Belgium,522.8981499,internet
+206,Brazil,398.678612,internet
+207,Bulgaria,450.2750518,internet
+208,Canada,512.3940462,internet
+209,Chile,457.1515442,internet
+210,China-Shanghai,620.7571261,internet
+211,Chinese Taipei,560.0639528,internet
+212,Colombia,405.0219943,internet
+213,Connecticut (USA),504.9810651,internet
+214,Costa Rica,421.9949698,internet
+215,Croatia,472.7201639,internet
+216,Czech Republic,521.9568424,internet
+217,Denmark,488.0588656,internet
+218,Estonia,522.9575749,internet
+219,Finland,510.1220236,internet
+220,Florida (USA),470.4560282,internet
+221,France,502.4400021,internet
+222,Germany,521.8265512,internet
+223,Greece,460.0667426,internet
+224,Hong Kong-China,563.4015379,internet
+225,Hungary,490.4096477,internet
+226,Iceland,495.2112665,internet
+227,Indonesia,408.6619729,internet
+228,Ireland,502.4785787,internet
+229,Italy,476.0282063,internet
+230,Japan,493.8723735,internet
+231,Jordan,544.3338298,internet
+232,Kazakhstan,397.7279031,internet
+233,Korea,446.9574357,internet
+234,Latvia,558.0742099,internet
+235,Liechtenstein,499.3157342,internet
+236,Lithuania,539.4726972,internet
+237,Luxembourg,483.2825848,internet
+238,Macao-China,492.5654708,internet
+239,Malaysia,540.2258554,internet
+240,Massachusetts (USA),442.6121945,internet
+241,Mexico,510.6780002,internet
+242,Montenegro,437.5573699,internet
+243,Netherlands,413.1177469,internet
+244,New Zealand,520.9557399,internet
+245,Norway,509.0423841,internet
+246,Perm(Russian Federation),491.9369252,internet
+247,Peru,492.0174416,internet
+248,Poland,407.2904777,internet
+249,Portugal,522.7184494,internet
+250,Qatar,489.433509,internet
+251,Romania,385.103245,internet
+252,Russian Federation,455.9069784,internet
+253,Serbia,486.8700343,internet
+254,Singapore,454.2675554,internet
+255,Slovak Republic,571.9881256,internet
+256,Slovenia,495.2431607,internet
+257,Spain,485.5040526,internet
+258,Sweden,499.4085755,internet
+259,Switzerland,482.4563457,internet
+260,Thailand,521.8360936,internet
+261,Tunisia,468.177321,internet
+262,Turkey,407.4383273,internet
+263,United Arab Emirates,468.5322696,internet
+264,United Kingdom,436.6997286,internet
+265,United States of America,492.7225582,internet
+266,Uruguay,486.8295912,internet
+267,Vietnam,425.4024031,internet

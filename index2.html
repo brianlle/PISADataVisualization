@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <style>
+    h2 { text-align: center ; }
+  </style>
+    <script type="text/javascript">
+      function draw(data) {
+      
+      /*
+        D3.js setup code
+      */
+
+          "use strict";
+          var margin = 75,
+              width = 1400 - margin,
+              height = 600 - margin;
+
+          d3.select('body').append('h2').text('PISA Math Averages Based on Home Environment');
+
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+            .append('g')
+                .attr('class','chart');
+
+      /*
+        Dimple.js Chart construction code
+      */
+
+          var myChart = new dimple.chart(svg, data);
+          var x = myChart.addCategoryAxis("x", "country");
+          x.addOrderRule("sort");
+          var y = myChart.addMeasureAxis("y", "math_average");
+          y.overrideMax = 650;
+
+          var seriesDict = {};
+
+          var s1 = myChart.addSeries("Internet", dimple.plot.area);
+          s1.data = dimple.filterData(data, "tools", "internet");
+          s1.interpolation = "step";
+          seriesDict["Internet"] = {data: dimple.filterData(data, "tools", "internet"),
+                                    series: s1, visible: true}
+
+          var s2 = myChart.addSeries("Computer", dimple.plot.area);
+          s2.data = dimple.filterData(data, "tools", "computer");
+          s2.interpolation = "step";
+          seriesDict["Computer"] = {data: dimple.filterData(data, "tools", "computer"),
+                                    series: s2, visible: true}
+
+          var s3 = myChart.addSeries("Own Room", dimple.plot.area);
+          s3.data = dimple.filterData(data, "tools", "room");
+          s3.interpolation = "step";
+          seriesDict["Own Room"] = {data: dimple.filterData(data, "tools", "room"),
+                                    series: s3, visible: true}
+
+          var s4 = myChart.addSeries("None", dimple.plot.area);
+          s4.data = dimple.filterData(data, "tools", "no_tools");
+          s4.interpolation = "step";
+          seriesDict["None"] = {data: dimple.filterData(data, "tools", "no_tools"),
+                                    series: s4, visible: true}
+
+          var myLegend = myChart.addLegend(1100, 50, 60, 300, "Right");
+          myChart.assignColor("Internet", "#80B1D3", "#6b94b0", 0.8);
+          myChart.assignColor("Computer", "#FB8072", "#d26b5f", 0.8);
+          myChart.assignColor("Own Room", "#FDB462", "#d39651", 0.8);
+          myChart.assignColor("None", "#B3DE69", "#95b957", 1);
+// internet "#80B1D3"
+// no tools "#B3DE69"
+
+          myChart.draw();
+
+          myChart.legends = [];
+          svg.selectAll("title_text")
+            .data(["Click legend to","toggle situations:"])
+            .enter()
+            .append("text")
+            .attr("x", 1050)
+            .attr("y", function (d, i) { return 40 + i * 14; })
+            .style("font-family", "sans-serif")
+            .style("font-size", "10px")
+            .style("color", "Black")
+            .text(function (d) { return d; });
+
+        myChart.legends = [];
+
+        myLegend.shapes.selectAll("rect")
+          // Add a click event to each rectangle
+          .on("click", function (e) {
+            var meta = seriesDict[e.aggField[0]];
+          console.log(meta);
+            if (seriesDict[e.aggField[0]].visible) {
+                meta.series.data = [];
+                d3.select(this).style("opacity", 0.2);
+                seriesDict[e.aggField[0]].visible = false;
+            } else {
+                meta.series.data = meta.data;         
+                d3.select(this).style("opacity", 1);     
+                seriesDict[e.aggField[0]].visible = true;
+            }
+            myChart.draw(800);
+         });
+
+        };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 (not dimple.js) to load the TSV file
+    and pass the contents of it to the draw function
+    */
+  d3.csv("math_averages_2.csv", draw);
+  </script>
+</body>
+</html>
+
