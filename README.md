@@ -16,8 +16,7 @@ I started the y-axis from 0 because I didn't want to falsely convey that having 
 
 Feedback was obtained by uploading my visualization to gist. Three transcripts are as follows:
 
-Tyler
------------
+Tyler:
 when you re click the latest legend block it brings it in the front
 which usually covers up all the others
 like if you reclick own room or internet it pops up and you cant see shit for the others
@@ -30,16 +29,14 @@ can you increase transparency or something
 i mean thats fine but if you keep the other option i would probably increase transperancy
 you could also change the y axis values to like 30 or 40 if it fits so the difference looks bigger
 
-jeff
------------
+jeff:
 on my browser when i click on a box i see a plot come up but it looks very faint
 i think that's just a problem with my browser tho
 otherwise i think it's pretty clear what you're plotting
 looks like the default sorting is by internet highest to lowest average
 is there
 
-jacob
------------
+jacob:
 it doesn't look like contiguous data
 also lul what does none even mean
 should you have a seperate category for yes-to-both
