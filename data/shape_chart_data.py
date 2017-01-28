@@ -1,12 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
-
 import pandas as pd
-
-
-# In[ ]:
 
 def create_averages_dataframe(df, target):
     
@@ -61,29 +56,13 @@ def create_averages_dataframe(df, target):
     return averages
 
 
-# In[2]:
 
 pisa = pd.read_csv('truncatedPisa.csv')
 
-
-# In[4]:
-
 math_averages = create_averages_dataframe(pisa, 'PV1MATH')
-
-
-# In[6]:
 
 math_averages = pd.melt(math_averages,id_vars=["country", "sort"],
                 value_vars=["no_tools", "room", "computer", "both", "average_all"],
                 var_name = "tools", value_name = "math_average")
 
-
-# In[31]:
-
 math_averages.to_csv("math_averages.csv")
-
-
-# In[ ]:
-
-
-
