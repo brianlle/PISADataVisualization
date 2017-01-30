@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <style>
+    h2 { text-align: center ; }
+  </style>
+  <script type="text/javascript">
+      function draw(data) {
+      
+      /*
+        D3.js setup code
+      */
+
+          "use strict";
+          var margin = 75,
+              width = 1350 - margin,
+              height = 1500 - margin;
+
+          d3.select('body').append('h2').html(
+            'PISA Math Scores Higher for Students with Home Computer' + '<br/>' + 'and/or Individual Bedroom than Students with Neither');
+
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+            .append('g')
+              .attr('class','chart');
+
+      /*
+        Dimple.js Chart construction code
+      */
+
+          var myChart = new dimple.chart(svg, data);
+          myChart.setBounds(200, 0, 0.6*width, height);
+
+          var y = myChart.addCategoryAxis("y", "country");
+          y.addOrderRule("country", true);  // sort x-axis by countries' average score ranks
+          y.showGridlines = true;
+          y.title = "";
+          y.fontSize = "13px";
+
+          var x = myChart.addMeasureAxis("x", "math_average");
+          x.title = "Average PV1MATH PISA Score";
+          x.overrideMax = 650;
+          x.fontSize = "15px";
+
+          // seriesDict used for legend chart toggling
+          var seriesDict = {};
+
+          var s4 = myChart.addSeries("No Room, No Computer", dimple.plot.bar);
+          s4.data = dimple.filterData(data, "tools", "no_tools");
+          s4.barGap = 0.2;
+          s4.interpolation = "step";
+          seriesDict["No Room, No Computer"] = {data: dimple.filterData(data, "tools", "no_tools"),
+                                    series: s4, visible: true}
+          
+          var s3 = myChart.addSeries("Has Own Room", dimple.plot.bubble);
+          s3.data = dimple.filterData(data, "tools", "room");
+          s3.interpolation = "step";
+          seriesDict["Has Own Room"] = {data: dimple.filterData(data, "tools", "room"),
+                                    series: s3, visible: true}
+
+          var s2 = myChart.addSeries("Has a Computer", dimple.plot.bubble);
+          s2.data = dimple.filterData(data, "tools", "computer");
+          s2.interpolation = "step";
+          seriesDict["Has a Computer"] = {data: dimple.filterData(data, "tools", "computer"),
+                                    series: s2, visible: true}
+
+          var s1 = myChart.addSeries("Has Own Room and Computer", dimple.plot.bubble);
+          s1.data = dimple.filterData(data, "tools", "both");
+          s1.interpolation = "step";
+          seriesDict["Has Own Room and Computer"] = {data: dimple.filterData(data, "tools", "both"),
+                                    series: s1, visible: true}
+        
+
+          //assign chart colors to individual series
+          myChart.assignColor("Has Own Room and Computer", "#FB8072","#d26b5f",  0.9);
+          myChart.assignColor("Has a Computer", "#80B1D3", "#6b94b0", 0.9);
+          myChart.assignColor("Has Own Room", "#FDB462", "#d39651", 0.9);
+          myChart.assignColor("No Room, No Computer", "#D3D3D3", "#808080", 0.8);
+
+          //create legend
+          var myLegend = myChart.addLegend(1170, 40, 60, 800, "Right");
+          myLegend.fontSize = "15px";
+
+          myChart.draw();
+
+          //increase x-axis label size
+          d3.selectAll('.dimple-axis.dimple-title').style('font-size', '20px');
+
+          svg.selectAll("title_text")
+            .data(["Click symbols to","toggle scenarios:"])
+            .enter()
+            .append("text")
+            .attr("x", 1000)
+            .attr("y", function (d, i) { return 30 + i * 14; })
+            .style("font-family", "sans-serif")
+            .style("font-size", "15px")
+            .style("color", "Black")
+            .text(function (d) { return d; });
+
+          // Setup legend toggling
+          myChart.legends = [];
+
+          myLegend.shapes.selectAll("rect")
+          // Add a click event to each rectangle
+            .on("click", function (e) {
+              var meta = seriesDict[e.aggField[0]];
+              console.log(meta);
+              if (seriesDict[e.aggField[0]].visible) {
+                meta.series.data = [];
+                d3.select(this).style("opacity", 0.2);
+                seriesDict[e.aggField[0]].visible = false;
+              } else {
+                meta.series.data = meta.data;         
+                d3.select(this).style("opacity", 1);     
+                seriesDict[e.aggField[0]].visible = true;
+              }
+
+              myChart.draw(800);
+
+              d3.selectAll('.dimple-axis.dimple-title').style('font-size', '20px');
+              });
+      
+        };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 (not dimple.js) to load the CSV file
+    and pass the contents of it to the draw function
+    */
+  d3.csv("math_averages.csv", draw);
+  </script>
+</body>
+</html>
