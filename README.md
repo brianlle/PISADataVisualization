@@ -57,7 +57,9 @@ You may need to repeat the change-feedback loop a couple of times before you get
 Below ideas to foster better communication between the reader and the visualisation:
 
 -have the average as area (greyscale is a great idea for colour coding average but if area you could go a bit lighter) and the other variables as dots? You will hopefully be able to see which scores are above and below average more easily.
+
 -group the countries into continents to get a wider overall picture - there are a lot of them and it's quite difficult to read. There could be the option to show both - by country or by continent.
+
 -switch the x and the y axis.
 One or a combination of the above should solve the problem.
 
