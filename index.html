@@ -20,7 +20,7 @@
               height = 1500 - margin;
 
           d3.select('body').append('h2').html(
-            'PISA Math Scores Higher for Students with Home Computer' + '<br/>' + 'and/or Individual Bedroom than Students with Neither');
+            '2012 International Math Assessment Scores Higher for Students with Home Computer' + '<br/>' + 'and/or Individual Bedroom than Students with Neither');
 
           var svg = d3.select("body")
             .append("svg")
@@ -34,7 +34,7 @@
       */
 
           var myChart = new dimple.chart(svg, data);
-          myChart.setBounds(200, 0, 0.6*width, height);
+          myChart.setBounds(200, 10, 0.6*width, height);
 
           var y = myChart.addCategoryAxis("y", "country");
           y.addOrderRule("country", true);  // sort x-axis by countries' average score ranks
@@ -43,7 +43,7 @@
           y.fontSize = "13px";
 
           var x = myChart.addMeasureAxis("x", "math_average");
-          x.title = "Average PV1MATH PISA Score";
+          x.title = "Average 2012 PISA Math Score";
           x.overrideMax = 650;
           x.fontSize = "15px";
 
