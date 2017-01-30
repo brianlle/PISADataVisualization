@@ -43,6 +43,7 @@ it doesn't look like contiguous data
 also lul what does none even mean
 should you have a seperate category for yes-to-both
 
+
 Udacity review:
 
 Your current title: "PISA Math Averages Based on Home Environment by Country" s exploratory. It's telling the reader what the data is and leaving them free to explore it further.
