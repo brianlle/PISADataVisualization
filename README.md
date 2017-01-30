@@ -61,6 +61,7 @@ Below ideas to foster better communication between the reader and the visualisat
 -group the countries into continents to get a wider overall picture - there are a lot of them and it's quite difficult to read. There could be the option to show both - by country or by continent.
 
 -switch the x and the y axis.
+
 One or a combination of the above should solve the problem.
 
 ## Resources
